@@ -7,6 +7,7 @@ const RecordKeeperIndex = () => {
     <>
       <Header />
       <TextField id="outlined-basic" label="Name" variant="outlined" />
+      <TextField id="outlined-basic" label="Gmail" variant="outlined" />
     </>
   );
 };
