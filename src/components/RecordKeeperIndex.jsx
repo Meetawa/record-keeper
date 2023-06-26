@@ -1,7 +1,12 @@
 import React from "react";
+import Header from "./Header";
 
 const RecordKeeperIndex = () => {
-  return <div></div>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default RecordKeeperIndex;
