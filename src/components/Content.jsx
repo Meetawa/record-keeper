@@ -53,7 +53,7 @@ const Content = () => {
         {data &&
           data.map((Element, index) => {
             return (
-              <Field key={index} name={Element.name} email={Element.email} />
+              <Field index={index} name={Element.name} email={Element.email} />
             );
           })}
       </div>
