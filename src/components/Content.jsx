@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import Field from "./Field";
+import DeleteIcon from "@mui/icons-material/Delete";
 const Content = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -53,7 +53,15 @@ const Content = () => {
         {data &&
           data.map((Element, index) => {
             return (
-              <Field index={index} name={Element.name} email={Element.email} />
+              <div className="data-val">
+                <h3>{name}</h3>
+                <h3>{email}</h3>
+                <Stack>
+                  <Button variant="outlined" color="error">
+                    <DeleteIcon />
+                  </Button>
+                </Stack>
+              </div>
             );
           })}
       </div>
