@@ -19,11 +19,11 @@ const Content = () => {
     setName("");
     setEmail("");
   }
-  function removeData(index) {
+  const removeData = (index) => {
     let arr = data;
     arr.splice(index, 1);
-    setData(...arr);
-  }
+    setData([...arr]);
+  };
   return (
     <div className="form">
       <Stack direction="row" spacing={2}>
@@ -58,8 +58,8 @@ const Content = () => {
           data.map((Element, index) => {
             return (
               <div className="data-val">
-                <h3>{name}</h3>
-                <h3>{email}</h3>
+                <h3>{Element.name}</h3>
+                <h3>{Element.email}</h3>
                 <Stack>
                   <Button
                     onClick={() => removeData(index)}
