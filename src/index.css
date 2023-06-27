@@ -13,6 +13,10 @@ body {
   padding: 1px;
   width: 100%;
 }
+.footer {
+  background-color: #69cb80;
+  height: 10px;
+}
 .form {
   padding: 20px;
 }
