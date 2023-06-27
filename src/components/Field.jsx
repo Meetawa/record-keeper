@@ -1,12 +1,18 @@
 import React from "react";
 
-const Field = ({ name, email, index }) => {
+const Field = ({ data }) => {
   return (
-    <div className="data-val">
-      <h3>{name}</h3>
-      <h3>{email} </h3>
-      <h3>Remove</h3>
-    </div>
+    <>
+      {data.map((element, index) => {
+        return (
+          <div className="data-val" key={index}>
+            <h3>{element.name}</h3>
+            <h3>{element.email}</h3>
+            <h3>Remove</h3>
+          </div>
+        );
+      })}
+    </>
   );
 };
 
