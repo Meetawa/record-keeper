@@ -17,3 +17,14 @@ body {
 .form {
   padding: 20px;
 }
+.data {
+  margin-top: 10px;
+}
+.data-val {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 9px 0px 9px;
+  border: 1px solid #69cb80;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
