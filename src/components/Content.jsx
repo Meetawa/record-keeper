@@ -1,17 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 const Content = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [data, setData] = useState("");
+
+  function addData() {
+    setData([
+      ...data,
+      {
+        name,
+        email,
+      },
+    ]);
+    setName("");
+    setEmail("");
+  }
+
   return (
     <div className="form">
       <Stack direction="row" spacing={2}>
-        <TextField id="outlined-basic" label="Name" variant="outlined" />
-        <TextField id="outlined-basic" label="Gmail" variant="outlined" />
-        <Button variant="contained" color="success">
+        <TextField
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          id="outlined-basic"
+          label="Name"
+          variant="outlined"
+        />
+        <TextField
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          id="outlined-basic"
+          label="Gmail"
+          variant="outlined"
+        />
+        <Button onClick={addData} variant="contained" color="success">
           ADD
         </Button>
       </Stack>
+
+      {/* Data */}
+
+      <div className="data">
+        <div className="data-val">
+          <h4>Name</h4>
+          <h4>Email id </h4>
+          <h4>Remove</h4>
+        </div>
+      </div>
     </div>
   );
 };
