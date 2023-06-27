@@ -8,7 +8,7 @@ const RecordKeeperIndex = () => {
   return (
     <div className="App">
       <Header />
-      <div>
+      <div className="form">
         <Stack direction="row" spacing={2}>
           <TextField id="outlined-basic" label="Name" variant="outlined" />
           <TextField id="outlined-basic" label="Gmail" variant="outlined" />
