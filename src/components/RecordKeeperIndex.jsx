@@ -7,6 +7,7 @@ const RecordKeeperIndex = () => {
     <div className="App">
       <Header />
       <Content />
+      <footer />
     </div>
   );
 };
