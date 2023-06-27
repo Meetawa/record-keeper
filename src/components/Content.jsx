@@ -19,7 +19,11 @@ const Content = () => {
     setName("");
     setEmail("");
   }
-
+  function removeData(index) {
+    let arr = data;
+    arr.splice(index, 1);
+    setData(...arr);
+  }
   return (
     <div className="form">
       <Stack direction="row" spacing={2}>
@@ -57,7 +61,11 @@ const Content = () => {
                 <h3>{name}</h3>
                 <h3>{email}</h3>
                 <Stack>
-                  <Button variant="outlined" color="error">
+                  <Button
+                    onClick={() => removeData(index)}
+                    variant="outlined"
+                    color="error"
+                  >
                     <DeleteIcon />
                   </Button>
                 </Stack>
