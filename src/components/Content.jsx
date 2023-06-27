@@ -45,9 +45,9 @@ const Content = () => {
 
       <div className="data">
         <div className="data-val">
-          <h4>Name</h4>
-          <h4>Email id </h4>
-          <h4>Remove</h4>
+          <h3>Name</h3>
+          <h3>Email id </h3>
+          <h3>Remove</h3>
         </div>
       </div>
     </div>
