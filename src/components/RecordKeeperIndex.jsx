@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 
 const RecordKeeperIndex = () => {
   return (
-    <>
+    <div className="App">
       <Header />
       <div>
         <Stack direction="row" spacing={2}>
@@ -17,7 +17,7 @@ const RecordKeeperIndex = () => {
           </Button>
         </Stack>
       </div>
-    </>
+    </div>
   );
 };
 
