@@ -50,7 +50,12 @@ const Content = () => {
           <h3>Email id </h3>
           <h3>Remove</h3>
         </div>
-        <Field data={data} />
+        {data &&
+          data.map((Element, index) => {
+            return (
+              <Field key={index} name={Element.name} email={Element.email} />
+            );
+          })}
       </div>
     </div>
   );
