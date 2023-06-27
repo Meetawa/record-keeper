@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import Field from "./Field";
 const Content = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -49,6 +50,11 @@ const Content = () => {
           <h3>Email id </h3>
           <h3>Remove</h3>
         </div>
+        {data.map((element, index) => {
+          return (
+            <Field name={element.name} email={element.name} index={index} />
+          );
+        })}
       </div>
     </div>
   );
